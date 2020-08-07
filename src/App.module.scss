@@ -1,7 +1,18 @@
+@import './sass/abstracts/mixins';
+@import './sass/abstracts/functions';
+@import './sass/abstracts/variables';
+
+
+@import './sass/base/base';
 @import './sass/base/utilities';
 @import './sass/base/typography';
 @import './sass/base/animations';
 
-@import './sass/abstracts/functions';
-@import './sass/abstracts/mixins';
-@import './sass/abstracts/variables';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
