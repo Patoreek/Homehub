@@ -3,6 +3,9 @@ import React, { useEffect, useContext, useState } from 'react';
 import classes from './WhiteboardView.module.scss';
 
 import Whiteboard from '../../components/Whiteboard/Whiteboard';
+import MenuButton from '../../components/MenuButton/MenuButton';
+
+
 
 import {PatTotalContext, NickTotalContext, RentCostContext} from '../../context/GlobalContext';
 
@@ -26,7 +29,7 @@ const WhiteboardView = () => {
         total: null
     });
 
-    const [formula, setFormula] = useState(null);
+    const [formula, setFormula] = useState(0);
 
     useEffect(() => {
 
@@ -77,6 +80,9 @@ const WhiteboardView = () => {
 
   return (
     <div className={classes.whiteboardView}>
+
+        <MenuButton/>
+
         <div className={classes.tableContainer}>
             <h3 className={classes.nameHeader}>Patrick</h3>
             <Whiteboard user="Patrick" rent={false}/>
@@ -85,6 +91,7 @@ const WhiteboardView = () => {
             <h3 className={classes.nameHeader}>Nick</h3>
             <Whiteboard user="Nick" rent={true}/>
         </div>
+
 
 
         <div className={classes.finalContainer}>

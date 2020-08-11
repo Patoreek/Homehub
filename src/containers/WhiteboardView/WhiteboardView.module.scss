@@ -1,14 +1,18 @@
 .whiteboardView {
     width: 100%;
     height: 100vh;
-    background-color: rgb(167, 167, 255);
+    //background-color: rgb(167, 167, 255);
+    background-color: #eee;
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
     padding: 5rem;
 
     .nameHeader {
-        font-size: 2rem;
+        font-size: 5.5rem;
+        padding: 1rem 2rem 0rem 0.5rem;
+        letter-spacing: .6rem;
+        //background-color: burlywood;
     }
 
     .tableContainer {
@@ -17,12 +21,12 @@
 
     .finalContainer {
         width: 99.5%;
-        height: 25vh;
+        height: auto;
         //background-color: rgb(242, 240, 240);
         font-size: 2rem;
-        padding: 0rem 1rem 1rem 1rem;
+        padding: 0rem 0rem 1rem 0rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         border-radius: 5px;
 
         .higherAmountTotalDiv {

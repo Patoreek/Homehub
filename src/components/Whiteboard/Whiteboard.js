@@ -11,6 +11,13 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Radio from '@material-ui/core/Radio';
 
+import ReplayIcon from '@material-ui/icons/Replay';
+import CheckIcon from '@material-ui/icons/Check';
+import ClearIcon from '@material-ui/icons/Clear';
+
+import Modal from '../Modal/Modal';
+
+
 import { PatTotalContext, NickTotalContext } from '../../context/GlobalContext';
 
 
@@ -24,6 +31,8 @@ const Whiteboard = (props) => {
     const [ table, setTable ] = useState([]);
 
     const [ rent, setRent ] = useState(205);
+
+    const [resetPressed, setResetPressed] = useState(false)
 
     const [patTotal, setPatTotal] = useContext(PatTotalContext);
     const [nickTotal, setNickTotal] = useContext(NickTotalContext);
@@ -178,8 +187,43 @@ const Whiteboard = (props) => {
         deleteItem();
     }
 
+    const resetBtnHandler = () => {
+        console.log('reseting...');
+        
+        async function resetBoard() {
+
+                try {
+                    const response = await fetch('http://localhost:8080/whiteboard/resetBoard/' + user,{
+                        method: 'GET',
+                        credentials: 'include',     
+                    });
+                    const data = await response.json();
+                    console.log(data);
+                    getWhiteboardHandler();
+    
+                } catch (error) {
+                console.log(error);
+                }
+        }
+
+        resetBoard();
+        setResetPressed(false)
+    }
+
   return (
     <div className={classes.whiteboard}>
+
+        {resetPressed && (
+            <Modal>
+                <div className={classes.confirmContainer}>
+                    <p className={classes.youSureText}> Are you sure?</p>
+                    <button className={classes.noBtn} onClick={() => setResetPressed(false)}><ClearIcon className={classes.noIcon}/></button>
+                    <button className={classes.yesBtn} onClick={resetBtnHandler}><CheckIcon className={classes.yesIcon}/></button>
+                </div>
+            </Modal>
+        )}
+
+
         <TableContainer component={Paper} className={classes.table}>
             <Table stickyHeader aria-label="users table">
             <TableHead>
@@ -231,18 +275,22 @@ const Whiteboard = (props) => {
             </TableHead>
             <TableBody>
                 <TableRow key="Add" className={`${classes.rowLine}`}>
-                    <TableCell component="th" scope="row" className={`${classes.cellText}`}>Add</TableCell>
+                    <TableCell component="th" scope="row" className={`${classes.cellText}`}>
+                        <span className={classes.addText}>Add</span>
+                    </TableCell>
                     <TableCell className={classes.cellText} align="right"></TableCell>
                     <TableCell className={classes.cellText} align="right"></TableCell>
                     <TableCell className={classes.cellText} align="right"></TableCell>
-                    <TableCell className={classes.cellText} align="right">Reset Table</TableCell>
+                    <TableCell className={classes.cellText} align="right">
+                        <button className={classes.resetBtn} onClick={() => setResetPressed(true)}> <ReplayIcon className={classes.resetIcon}/> </button>
+                    </TableCell>
                 </TableRow>
                 <TableRow key="Input">
                     <TableCell component="th" scope="row" className={`${classes.cellText} ${classes.inputCell} ${classes.inputNameCell} `}>
                         <input className={classes.input} 
                                 type="text" id="name" 
                                 name="name" 
-                                placeholder="New Thing" 
+                                placeholder="Enter Name here" 
                                 value={name} 
                                 onChange={handleNameChange}/>
                     </TableCell>
@@ -252,7 +300,7 @@ const Whiteboard = (props) => {
                                 step="0.01" 
                                 id="name" 
                                 name="name" 
-                                placeholder="60"
+                                placeholder="$0.00"
                                 value={total}
                                 onChange={handleTotalChange}/>
                     </TableCell>
