@@ -1,0 +1,172 @@
+.table {
+    width: 99% !important;
+    min-height: 400px;
+    max-height: 400px;
+    position: relative;
+    border-radius: 5px 5px 0px 0px !important;
+
+    .loopedBody {
+        background-color: rgb(208, 206, 206);
+    }
+
+    .cellText {
+        font-size: 1.5rem;
+    
+        .deleteBtn {
+            padding: .5rem 1.5rem 1rem 1.5rem;
+            font-size: 4rem;
+            border-radius: 3px;
+            line-height: .5;
+            outline:none;
+            border: none;
+            background-color: rgb(215, 8, 8);
+            color: rgb(227, 227, 227);
+            transition: all .3s ease;
+            box-shadow: -.5rem 1rem 3rem rgba(0, 0, 0, 0.8);
+    
+    
+            &:hover {
+                background-color: rgb(240, 13, 13);
+                transform: translate(1px, -3px);
+                box-shadow: -.3rem 1.5rem 3.5rem rgba(0, 0, 0, 0.6);
+            }
+    
+            &:active {
+                transform: translate(1px, -1px);
+                box-shadow: -.3rem 1.2rem 3rem rgba(0, 0, 0, 0.7);
+            }
+        }
+    
+        .addBtn {
+            padding: .5rem 1rem .5rem 1rem;
+            font-size: 4rem;
+            border-radius: 3px;
+            line-height: .8;
+            outline:none;
+            border: none;
+            background-color: rgb(47, 194, 18);
+            color: rgb(227, 227, 227);
+            transition: all .3s ease;
+            box-shadow: -.5rem 1rem 3rem rgba(0, 0, 0, 0.8);
+    
+    
+            &:hover {
+                background-color: rgb(54, 218, 21);
+                transform: translate(1px, -3px);
+                box-shadow: -.3rem 1.5rem 3.5rem rgba(0, 0, 0, 0.6);
+            }
+    
+            &:active {
+                transform: translate(1px, -1px);
+                box-shadow: -.3rem 1.2rem 3rem rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+    
+    .cellBold {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+}
+
+.bottomTable {
+    width: 99% !important;
+    border-radius: 0px 0px 5px 5px !important;
+
+    .cellText {
+        font-size: 1.5rem;
+        //background-color: goldenrod;
+        //border: 1px solid green;
+
+        .deleteBtn {
+            padding: .5rem 1.5rem 1rem 1.5rem;
+            font-size: 4rem;
+            border-radius: 3px;
+            line-height: .5;
+            outline:none;
+            border: none;
+            background-color: rgb(215, 8, 8);
+            color: rgb(227, 227, 227);
+            transition: all .3s ease;
+            box-shadow: -.5rem 1rem 3rem rgba(0, 0, 0, 0.8);
+    
+    
+            &:hover {
+                background-color: rgb(240, 13, 13);
+                transform: translate(1px, -3px);
+                box-shadow: -.3rem 1.5rem 3.5rem rgba(0, 0, 0, 0.6);
+            }
+    
+            &:active {
+                transform: translate(1px, -1px);
+                box-shadow: -.3rem 1.2rem 3rem rgba(0, 0, 0, 0.7);
+            }
+        }
+    
+        .addBtn {
+            padding: .5rem 1rem .5rem 1rem;
+            font-size: 4rem;
+            border-radius: 3px;
+            line-height: .8;
+            outline:none;
+            border: none;
+            background-color: rgb(47, 194, 18);
+            color: rgb(227, 227, 227);
+            transition: all .3s ease;
+            box-shadow: -.5rem 1rem 3rem rgba(0, 0, 0, 0.8);
+    
+    
+            &:hover {
+                background-color: rgb(54, 218, 21);
+                transform: translate(1px, -3px);
+                box-shadow: -.3rem 1.5rem 3.5rem rgba(0, 0, 0, 0.6);
+            }
+    
+            &:active {
+                transform: translate(1px, -1px);
+                box-shadow: -.3rem 1.2rem 3rem rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+    
+    .cellBold {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    
+    .inputCell {
+        padding: 0;
+    
+        .input {
+            width: 100%;
+            padding: 2.5rem 1.2rem;
+            font-size: 2rem;
+            border: none;
+            border-right: 1px solid grey;
+        }
+    
+        .numberRight {
+            float:left;
+            text-align: right;
+            width: 100%;
+        }
+    }
+
+    .inputNameCell {
+       width: 28%; 
+    }
+
+    .inputTotalCell {
+        width: 15%; 
+     }
+    
+    .rowLine {
+        //background-color: gold;
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+        
+    }
+}

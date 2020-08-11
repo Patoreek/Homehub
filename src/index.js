@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { GlobalProvider } from './context/GlobalContext';
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalProvider>
+      <App />
+    </GlobalProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -24,7 +24,9 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.781);
+           //background-color: rgba(0, 0, 0, 0.781);
+           background-color: rgba(13, 3, 77, 0.9);
+
         }
 
 
@@ -36,7 +38,8 @@
     .menuViewHeader {
         position: relative;
         z-index: 10;
-        color: rgba(255, 255, 255, 0.297);
+        color: rgba(255, 255, 255, 0.496);
+        //color: rgba(134, 98, 94, 0.79);
         font-size: 30em;
         letter-spacing: 1rem;
         //text-transform: uppercase;
@@ -52,6 +55,8 @@
         z-index: 10;
         align-self: center;
         margin-top: 1rem;
+        display: flex;
+        text-align: center;
 
         .btn {
             background-color: rgba(220, 220, 220, 0.612);
@@ -73,7 +78,7 @@
                 left: 0;
                 width: 100%;
                 height: 0rem;
-                background-color: rgb(205, 188, 12);
+                background-color: rgb(8, 102, 184);
                 transition: .3s ease;
             }
 
@@ -88,14 +93,26 @@
 
             }
 
+            &:active, &:focus {
+                transform: translate(.25rem ,-.5rem); 
+            }
+
             .svg {
                 width: 14rem;
                 height: 14rem;
                 display: block;
             }
 
+            .collectionSVG {
+                fill: rgb(211, 205, 11);
+            }
+
+            .eventSVG {
+                fill: rgb(11, 78, 150);
+            }
+
             &:hover .btnText {
-                color: rgb(69, 13, 138);
+                color: rgb(174, 174, 174);
             }
 
             .btnText {
@@ -106,6 +123,10 @@
                 padding-bottom: 5px;
                 font-size: 2rem;
                 font-family: $font-header;
+            }
+
+            a {
+                color: inherit;
             }
         }
     }
