@@ -1,0 +1,17 @@
+.todoView {
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to bottom right, rgb(0, 132, 255) 75%, rgb(5, 116, 220) 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nameHeader {
+        font-size: 5.5rem;
+        padding: 1rem 2rem 0rem 0.5rem;
+        letter-spacing: .6rem;
+        color: #eee;
+        
+        //background-color: burlywood;
+    }
+}

@@ -57,13 +57,13 @@ const MenuView = () => {
                     <span className={classes.btnText}>Whiteboard</span>
                 </div>
                 <div className={classes.btn}>
-                    <a href="https://www.telstra.com.au/" target="_blank">
+                    <a href="https://www.my.telstra.com.au/myaccount/overview" target="_blank">
                         <TelstraSVG className={classes.svg}/>
                         <span className={classes.btnText}>Telstra</span>
                     </a>
                 </div>
                 <div className={classes.btn}>
-                    <a href="https://www.optus.com.au/" target="_blank">
+                    <a href="https://www.optus.com.au/my-account" target="_blank">
                     <OptusSVG className={classes.svg}/>
                     <span className={classes.btnText}>Optus</span>
                     </a>
@@ -72,14 +72,14 @@ const MenuView = () => {
                     <TodoSVG className={classes.svg}/>
                     <span className={classes.btnText}>To do</span>
                 </div>
-                <div className={classes.btn} onClick={() => buttonHandler("collections")}>
+                {/* <div className={classes.btn} onClick={() => buttonHandler("collections")}>
                     <CollectionSVG className={`${classes.svg} ${classes.collectionSVG}`}/>
                     <span className={classes.btnText}>Collections</span>
                 </div>
                 <div className={classes.btn} onClick={() => buttonHandler("events")}>
                     <EventSVG className={`${classes.svg} ${classes.eventSVG}`}/>
                     <span className={classes.btnText}>Events</span>
-                </div>
+                </div> */}
             </div>
         </div>
     );

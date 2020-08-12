@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     //background-color: rgb(167, 167, 255);
-    background-color: #eee;
+    background-image:linear-gradient(to bottom right, rgb(0, 132, 255) 75%, rgb(5, 116, 220) 75%);
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
@@ -12,6 +12,7 @@
         font-size: 5.5rem;
         padding: 1rem 2rem 0rem 0.5rem;
         letter-spacing: .6rem;
+        color: #eee;
         //background-color: burlywood;
     }
 

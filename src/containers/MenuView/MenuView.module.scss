@@ -25,7 +25,9 @@
             width: 100%;
             height: 100vh;
            //background-color: rgba(0, 0, 0, 0.781);
-           background-color: rgba(13, 3, 77, 0.9);
+           //background-color: rgba(13, 3, 77, 0.9);
+           background-image:linear-gradient(to bottom right, rgba(0, 132, 255, .85) 75%, rgba(5, 116, 220, .85) 75%);
+
 
         }
 
@@ -38,7 +40,7 @@
     .menuViewHeader {
         position: relative;
         z-index: 10;
-        color: rgba(255, 255, 255, 0.496);
+        color: #eee;
         //color: rgba(134, 98, 94, 0.79);
         font-size: 30em;
         letter-spacing: 1rem;

@@ -5,7 +5,7 @@
     margin: 2rem 5rem;
     padding: 1rem 2.5rem;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid #eee;
     border-radius: 3px;
     overflow: hidden;
     transition: all .2s ease;
@@ -15,6 +15,7 @@
         font-size: 1.6rem;
         font-weight: 500;
         z-index: 20;
+        color: #eee;
 
     }
 
@@ -26,7 +27,7 @@
         right: 0;
         width: 0%;
         height: 100%;
-        background-color: rgb(11, 11, 11);
+        background-color: #eee;
         z-index: 10;
         transition: all .2s ease;
     }
@@ -36,7 +37,7 @@
     }
 
     &:hover span {
-        color: #eee;
+        color: rgb(7, 41, 208);
     }
 
 
