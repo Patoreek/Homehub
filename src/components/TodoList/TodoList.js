@@ -181,7 +181,7 @@ const TodoList = () => {
             </TableHead>
             <TableBody className={classes.loopedBody}>
             {table.map((row) => (
-                <TableRow key={row.task}>
+                <TableRow key={row.task} className={classes.entryRow}>
                 <TableCell component="th" scope="row" className={`${classes.cellText}  ${classes.inputCell} `}>
                     {row.task}
                 </TableCell>

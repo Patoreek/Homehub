@@ -126,7 +126,7 @@ const WhiteboardView = () => {
             {rentCost != 205 && (
                 /*I pay Nick this much for rent if I pay more than him that week: ${formula}*/
                 <div className={classes.finalCalcDiv}>
-                <span className={classes.finalCalcName}>Patrick pays Nick this much for rent </span>
+                <span className={classes.finalCalcNamePat}>Patrick pays Nick this much for rent </span>
                 <span className={classes.finalCalcNum}>${formula}</span>
             </div>
             )}

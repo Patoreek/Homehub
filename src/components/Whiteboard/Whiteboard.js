@@ -238,7 +238,7 @@ const Whiteboard = (props) => {
             </TableHead>
             <TableBody className={classes.loopedBody}>
             {table.map((row) => (
-                <TableRow key={row.name}>
+                <TableRow key={row.name} className={classes.entryRow}>
                 <TableCell component="th" scope="row" className={classes.cellText}>
                     {row.name}
                 </TableCell>

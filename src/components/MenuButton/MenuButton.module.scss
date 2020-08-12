@@ -1,3 +1,6 @@
+@import '../../sass/abstracts/variables';
+
+
 .btn {
     position: absolute;
     top: 0;
@@ -5,7 +8,7 @@
     margin: 2rem 5rem;
     padding: 1rem 2.5rem;
     background-color: transparent;
-    border: 1px solid #eee;
+    border: 1px solid $color-white;
     border-radius: 3px;
     overflow: hidden;
     transition: all .2s ease;
@@ -15,8 +18,12 @@
         font-size: 1.6rem;
         font-weight: 500;
         z-index: 20;
-        color: #eee;
+        color: $color-white;
 
+    }
+
+    &:active {
+        outline: none;
     }
 
     &::before {
@@ -27,7 +34,7 @@
         right: 0;
         width: 0%;
         height: 100%;
-        background-color: #eee;
+        background-color: $color-white;
         z-index: 10;
         transition: all .2s ease;
     }
@@ -37,7 +44,7 @@
     }
 
     &:hover span {
-        color: rgb(7, 41, 208);
+        color: $color-primary-dark;
     }
 
 
