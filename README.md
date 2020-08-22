@@ -20,7 +20,7 @@ npm start
 ```
 
 ## Usage
-Running this will simply run the frontend of Homehub. The backend can be found [here](https://github.com/Patoreek/Homehub-backend).
+Running this will simply run the **frontend** of Homehub. The backend can be found [here](https://github.com/Patoreek/Homehub-backend).
 Once started, pretty self-explanitory. Only 4 Buttons on the Main menu.
 Whiteboard has a simple form at the bottom of each table and todo list is a simple input.
 
